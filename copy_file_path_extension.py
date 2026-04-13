@@ -37,6 +37,13 @@ class CopyFilePathExtension(GObject.GObject, Nautilus.MenuProvider):
         value.set_string(text)
         display.get_clipboard().set(value)
 
+        primary = display.get_primary_clipboard()
+        if primary is not None:
+            primary_value = GObject.Value()
+            primary_value.init(str)
+            primary_value.set_string(text)
+            primary.set(primary_value)
+
     def _format_path(self, path):
         if " " in path:
             return f"'{path}'"
