@@ -9,6 +9,10 @@
 - 选中 1 个项目时，复制单个绝对路径
 - 选中多个项目时，按换行拼接后复制
 
+## 效果截图
+
+![Nautilus 右键菜单中的 Copy File Path 截图](./copypath.png)
+
 ## 依赖
 
 Ubuntu / Debian 一般需要：
